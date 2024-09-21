@@ -1,8 +1,16 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Pre-requisites
+
+- You must have npm installed (I use nvm which has installation instructions here: https://github.com/nvm-sh/nvm, it makes updating easier),
+
 ## Getting Started
 
-First, run the development server:
+First, git clone the repo: 'git clone https://github.com/hughCulling/album-art-generator.git'.
+
+Second, run 'npm install'.
+
+Third, run the development server:
 
 ```bash
 npm run dev
