@@ -6,15 +6,17 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, git clone the repo: '
+First, git clone the repo:
 
 ```bash
 git clone https://github.com/hughCulling/album-art-generator.git
 ```
 
-'.
+Second, install the node_modules:
 
-Second, run 'npm install'.
+```bash
+npm install
+```
 
 Third, run the development server:
 
