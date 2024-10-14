@@ -3,14 +3,17 @@
 import { useState } from "react";
 
 export default function TranscribeComponent() {
-  const [audioFile, setAudioFile] = useState(null);
+  // Explicitly define the state type as 'File | null'
+  const [audioFile, setAudioFile] = useState<File | null>(null);
 
-  const handleFileChange = (e) => {
-    setAudioFile(e.target.files[0]);
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files.length > 0) {
+      setAudioFile(e.target.files[0]);
+    }
   };
 
   // Function to handle form submission
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!audioFile) {
