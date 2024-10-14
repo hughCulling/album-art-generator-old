@@ -21,7 +21,7 @@ async function query(filename) {
             "https://api-inference.huggingface.co/models/openai/whisper-large-v3",
             {
               headers: {
-                Authorization: "Bearer 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", // Make sure your token is correct
+                Authorization: `Bearer ${process.env.HF_ACCESS_TOKEN}`, // Make sure your token is correct
                 "Content-Type": "application/json",
               },
               method: "POST",
