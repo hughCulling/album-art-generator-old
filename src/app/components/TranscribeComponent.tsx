@@ -51,11 +51,11 @@ export default function TranscribeComponent() {
   };
 
   // Handler for transcription text area changes
-  const handleTranscriptionChange = (
-    e: React.ChangeEvent<HTMLTextAreaElement>
-  ) => {
-    setTranscription(e.target.value);
-  };
+  // const handleTranscriptionChange = (
+  //   e: React.ChangeEvent<HTMLTextAreaElement>
+  // ) => {
+  //   setTranscription(e.target.value);
+  // };
 
   return (
     <>
