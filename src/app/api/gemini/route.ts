@@ -6,14 +6,14 @@ const genAI = new GoogleGenerativeAI(process.env.API_KEY!);
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 export async function POST(req: Request) {
-  const { lyrics } = await req.json();
+  const { transcription } = await req.json();
 
-  if (!lyrics) {
+  if (!transcription) {
     return NextResponse.json({ error: "Lyrics not provided" }, { status: 400 });
   }
 
   // Prepare the prompt for Gemini API
-  const prompt = `Write a single prompt for an art generator to create album art. The keyword is 'lm'. Base the prompt on these lyrics: "${lyrics}". Please provide the response in plain text without using Markdown formatting.`;
+  const prompt = `Write a single prompt for an art generator to create album art. The keyword is 'lm'. Base the prompt on these lyrics: "${transcription}". Please provide the response in plain text without using Markdown formatting.`;
 
   try {
     const result = await model.generateContent(prompt);

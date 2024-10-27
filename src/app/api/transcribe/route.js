@@ -101,9 +101,12 @@ export const POST = async (request) => {
 
     console.log(result);
 
+    // return NextResponse.json({
+    //   message: "File uploaded successfully",
+    //   filename,
+    // });
     return NextResponse.json({
-      message: "File uploaded successfully",
-      filename,
+      transcription: result.text,
     });
   } catch (error) {
     console.error("Error uploading file:", error);
